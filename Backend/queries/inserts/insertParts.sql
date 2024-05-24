@@ -1,0 +1,2 @@
+INSERT INTO Part (Name, Link, NumInStock, PurchaseOrderCreated, PendingOrder, ExpectedDeliveyDate, EXHIBIT_Name)
+VALUES ('Lightbulb', 'http://example.com/lightbulb', 8, FALSE, FALSE, NULL, 'Moon Chair');

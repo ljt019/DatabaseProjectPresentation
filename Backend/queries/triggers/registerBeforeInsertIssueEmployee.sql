@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE TRIGGER BeforeInsertIssueEmployee
+BEFORE INSERT ON Issue
+FOR EACH ROW
+BEGIN
+    IF NEW.EMPLOYEE_AccountID IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Employee Account ID cannot be null';
+    END IF;
+END$$
+
+DELIMITER ;
